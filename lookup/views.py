@@ -29,6 +29,7 @@ def home(request):
 		category_description = "(100-150) Air quality is bad"
 		category_color = "Bad"
 
+	zipcode =''
 	return render(request, 'home.html', {
 		'api': api,
 		'category_description':category_description,
