@@ -3,5 +3,21 @@
 {% block content %}
 
 <h1>Hello world</h1>
+<br/>
+<!-- {{ api }} -->
+
+{% if api %}
+	{% if api == "Error..." %}
+		Error , try again...
+	{% else %}
+		<div class="jumbotron {{ category_color}}">
+		  <h1 class="display-4">{{ api.0.Category.Name }} -- {{ zipcode }}</h1>
+		  <p class="lead">Current {{ api.0.ReportingArea }} Air Quality : {{ api.0.AQI }}</p>
+		  <p>{{ category_description }}</p>
+		</div>
+	{% endif %}
+
+{% endif %}
+
 
 {% endblock %}
