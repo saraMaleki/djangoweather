@@ -30,12 +30,15 @@ def home(request):
 		category_color = "Bad"
 
 	zipcode =''
-	return render(request, 'home.html', {
+
+	context = {
 		'api': api,
 		'category_description':category_description,
 		'category_color':category_color,
 		'zipcode': zipcode
-		})
+		}
+
+	return render(request, 'home.html', context)
 
 
 def about(request):
