@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'lookup',
     'todo_list',
+    'courses',
+       
 ]
 
 MIDDLEWARE = [
@@ -123,3 +126,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
             os.path.join(BASE_DIR, 'static'),    
         ]
+

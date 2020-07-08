@@ -25,14 +25,14 @@
 			{% if thing.completed %}
 				<tr class="table-secondary">
 					<td class="striker"><a href="{% url 'edit' thing.id %}">{{ thing.item }}</a> </td>
-					<td><center> <a href="{% url 'uncross' thing.id %}">Uncross</a></center></td>
-					<td><center><a href="{% url 'delete' thing.id %}"> Delete</a></center></td>
+					<td><center> <a href="{% url 'uncross' thing.id %}" >Uncross</a></center></td>
+					<td><center><a href="{% url 'delete' thing.id %}" class="btn btn-secondary"> Delete</a></center></td>
 				</tr>
 			{% else %}
 				<tr>
 					<td><a href="{% url 'edit' thing.id %}">{{ thing.item }} </a></td>
-					<td><center> <a href="{% url 'cross_off' thing.id %}">Cross</a></center></td>
-					<td><center> <a href="{% url 'delete' thing.id %}"> Delete</a></center></td>
+					<td><center> <a href="{% url 'cross_off' thing.id %}" >Cross</a></center></td>
+					<td><center> <a href="{% url 'delete' thing.id %}" class="btn btn-secondary"> Delete</a></center></td>
 				</tr>
 			{% endif %}
 		{% endfor %}
